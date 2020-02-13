@@ -39,13 +39,13 @@ import java.lang.System;
 
 public class About extends BaseSettingsFragment {
 
-    private static final String PROPERTY_MAINTAINER = "ro.aicp.maintainer";
+    private static final String PROPERTY_MAINTAINER = "ro.baikalos.maintainer";
     private static final String PREF_DEVICE_MAINTAINER = "device_maintainer";
-    private static final String PROPERTY_AICP_VERSION = "ro.aicp.display.version";
-    private static final String PREF_AICP_VERSION = "aicp_version";
+    private static final String PROPERTY_AICP_VERSION = "ro.baikalos.display.version";
+    private static final String PREF_AICP_VERSION = "baikalos_version";
     private static final String PROPERTY_BUILD_DATE = "ro.build.date";
     private static final String PREF_BUILD_DATE = "build_date";
-    private static final String PREF_AICP_LOGO = "aicp_logo";
+    private static final String PREF_AICP_LOGO = "baikalos_logo";
 
     private Preference mDeviceMaintainer;
     private Preference mAicpVersion;

@@ -131,35 +131,35 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/other_category">
+    <!-- PreferenceCategory
+        android:title="@string/other_category" -->
 
-        <PreferenceScreen
+        <!-- PreferenceScreen
             android:title="@string/about_title"
             android:key="about"
             android:summary="@string/about_summary"
             android:icon="@drawable/ic_settings_about"
-            android:fragment="com.aicp.extras.fragments.About" />
+            android:fragment="com.aicp.extras.fragments.About" / -->
 
-        <Preference
+        <!-- Preference
             android:title="@string/aicp_ota_title"
             android:key="aicp_ota"
             android:summary="@string/aicp_ota_summary"
-            android:icon="@drawable/ic_settings_ota" />
+            android:icon="@drawable/ic_settings_ota" / -->
 
-        <PreferenceScreen
+        <!-- PreferenceScreen
             android:title="@string/log_it_title"
             android:key="log_it"
             android:summary="@string/log_it_summary"
             android:icon="@drawable/ic_settings_log_it"
-            android:fragment="com.aicp.extras.fragments.LogIt" />
+            android:fragment="com.aicp.extras.fragments.LogIt" / -->
 
-        <PreferenceScreen
+        <!-- PreferenceScreen
             android:title="@string/ae_settings_title"
             android:key="ae_settings"
             android:summary="@string/ae_settings_summary"
             android:icon="@drawable/ic_settings_ae_customization"
-            android:fragment="com.aicp.extras.fragments.AeSettings" />
+            android:fragment="com.aicp.extras.fragments.AeSettings" / -->
 
-    </PreferenceCategory>
+    <!-- /PreferenceCategory -->
 </PreferenceScreen>
