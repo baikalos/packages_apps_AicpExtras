@@ -458,7 +458,6 @@
     <!-- Battery styles -->
     <string-array name="battery_style_entries" translatable="false">
         <item>@string/status_bar_battery_style_q</item>
-        <item>@string/battery_style_port</item>
         <item>@string/battery_style_circle</item>
         <item>@string/battery_style_dotted_circle</item>
         <item>@string/battery_style_big_circle</item>
@@ -466,7 +465,6 @@
      </string-array>
      <string-array name="battery_style_values" translatable="false">
         <item>8</item>
-        <item>0</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
@@ -953,4 +951,31 @@
        <item>2</item>
        <item>3</item>
    </string-array>
+
+    <!-- Gaming Mode -->
+    <string-array name="gaming_mode_ringer_entries">
+        <item>@string/gaming_mode_ringer_off_title</item>
+        <item>@string/gaming_mode_ringer_vibrate_title</item>
+        <item>@string/gaming_mode_ringer_dnd_title</item>
+        <item>@string/gaming_mode_ringer_silent_title</item>
+    </string-array>
+    <string-array name="gaming_mode_ringer_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="gaming_mode_notifications_entries">
+        <item>@string/gaming_mode_notifications_off_title</item>
+        <item>@string/gaming_mode_notifications_notif_title</item>
+        <item>@string/gaming_mode_notifications_toast_title</item>
+        <item>@string/gaming_mode_notifications_all_title</item>
+    </string-array>
+    <string-array name="gaming_mode_notifications_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 </resources>
