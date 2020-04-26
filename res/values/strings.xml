@@ -1187,6 +1187,7 @@
     <string name="battery_light_summary">LED color while charging</string>
     <string name="battery_low_pulse_title">Pulse if battery low</string>
     <string name="battery_light_only_full_charge_title">Only light up when fully charged</string>
+    <string name="battery_light_allow_on_dnd_title">Light up in DND mode</string>
     <string name="battery_light_list_title">Colors</string>
     <string name="battery_light_low_color_title">Battery low</string>
     <string name="battery_light_medium_color_title">Charging</string>

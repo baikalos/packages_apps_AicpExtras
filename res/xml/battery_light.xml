@@ -26,6 +26,12 @@
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="battery_light_allow_on_dnd"
+        android:title="@string/battery_light_allow_on_dnd_title"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
     <PreferenceCategory
         android:key="blend_category"
         android:title="@string/battery_light_blend_category"

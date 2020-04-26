@@ -915,6 +915,7 @@
     <string name="battery_light_summary">Цвета светодиода во время зарядки</string>
     <string name="battery_low_pulse_title">Мигать при низком уровне заряда</string>
     <string name="battery_light_only_full_charge_title">Загораться только при полной зарядке</string>
+    <string name="battery_light_allow_on_dnd_title">Индикация в режиме не беспокоить</string>
     <string name="battery_light_list_title">Цвета</string>
     <string name="battery_light_low_color_title">Низкий заряд батареи</string>
     <string name="battery_light_medium_color_title">Заряжается</string>
