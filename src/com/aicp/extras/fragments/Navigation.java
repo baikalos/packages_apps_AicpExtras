@@ -38,9 +38,14 @@ import com.aicp.gear.preference.SeekBarPreferenceCham;
 import com.android.internal.util.aicp.DeviceUtils;
 import com.android.internal.util.hwkeys.ActionConstants;
 import com.android.internal.util.hwkeys.ActionUtils;
+import android.util.Log;
+
 
 public class Navigation extends BaseSettingsFragment implements
             Preference.OnPreferenceChangeListener {
+
+    private static final String TAG = "AicpExtras";
+    private static final Boolean DEBUG = true;
 
     private static final String KEY_KILLAPP_LONGPRESS_BACK = "kill_app_longpress_back";
     private static final String KEY_SWAP_HW_NAVIGATION_KEYS = "swap_navigation_keys";
@@ -94,6 +99,8 @@ public class Navigation extends BaseSettingsFragment implements
         mNeedsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
         mHwKeysSupported = ActionUtils.isHWKeysSupported(getActivity());
 
+        if (DEBUG) Log.d(TAG, "mHwKeysSupported= " + mHwKeysSupported);
+
         mHwKeyCategory = (PreferenceCategory) prefScreen
                 .findPreference(CATEGORY_HWKEY);
         mLongPressBackToKill = (SwitchPreference) findPreference(KEY_KILLAPP_LONGPRESS_BACK);
@@ -107,8 +114,23 @@ public class Navigation extends BaseSettingsFragment implements
 
         mManualButtonBrightness = (SeekBarPreferenceCham) findPreference(
                 KEY_BUTTON_MANUAL_BRIGHTNESS_NEW);
+
+        PowerManager pm = (PowerManager)getActivity().getSystemService(Context.POWER_SERVICE);
+        final int customButtonBrightness = pm.getDefaultButtonBrightnessSetting();
+        final int currentBrightness = Settings.System.getInt(resolver,
+                Settings.System.CUSTOM_BUTTON_BRIGHTNESS, customButtonBrightness);
+
+        mManualButtonBrightness.setMax(pm.getMaximumButtonBrightnessSetting());
+        mManualButtonBrightness.setMin(pm.getMinimumButtonBrightnessSetting());
+        mManualButtonBrightness.setValue(currentBrightness);
+        mManualButtonBrightness.setDefaultValue(customButtonBrightness);
         mManualButtonBrightness.setOnPreferenceChangeListener(this);
+
+
         mButtonTimoutBar = (SeekBarPreferenceCham) findPreference(KEY_BUTTON_TIMEOUT);
+        int currentTimeout = Settings.System.getInt(resolver,
+                Settings.System.BUTTON_BACKLIGHT_TIMEOUT, 0);
+        mButtonTimoutBar.setValue(currentTimeout);
         mButtonTimoutBar.setOnPreferenceChangeListener(this);
 
         // bits for hardware keys present on device
@@ -199,6 +221,7 @@ public class Navigation extends BaseSettingsFragment implements
     }
 
     private void updateDependents(boolean enabled) {
+        if (DEBUG) Log.d(TAG, "enabled= " + enabled);
         updateWakeVisibility(enabled);
         updateButtonBacklight(enabled);
         mLongPressBackToKill.setEnabled(enabled);
@@ -230,15 +253,17 @@ public class Navigation extends BaseSettingsFragment implements
                   findPreference(KEY_BUTTON_BACKLIGHT_OPTIONS);
         final boolean enableBacklightOptions = getResources().getBoolean(
                 com.android.internal.R.bool.config_button_brightness_support);
-        if (mHwKeysSupported && enableBacklightOptions && enabled){
-            final int customButtonBrightness = getResources().getInteger(
-                    com.android.internal.R.integer.config_button_brightness_default);
-            final int currentBrightness = Settings.System.getInt(getContentResolver(),
-                    Settings.System.CUSTOM_BUTTON_BRIGHTNESS, customButtonBrightness);
-            PowerManager pm = (PowerManager) getActivity().getSystemService(Context.POWER_SERVICE);
-            mManualButtonBrightness.setMax(pm.getMaximumScreenBrightnessSetting());
-            mManualButtonBrightness.setValue(currentBrightness);
-            mManualButtonBrightness.setDefaultValue(customButtonBrightness);
+        if (mHwKeysSupported && enableBacklightOptions /*&& enabled*/){
+
+        PowerManager pm = (PowerManager)getActivity().getSystemService(Context.POWER_SERVICE);
+        final int customButtonBrightness = pm.getDefaultButtonBrightnessSetting();
+        final int currentBrightness = Settings.System.getInt(getContentResolver(),
+                Settings.System.CUSTOM_BUTTON_BRIGHTNESS, customButtonBrightness);
+
+        mManualButtonBrightness.setMax(pm.getMaximumButtonBrightnessSetting());
+        mManualButtonBrightness.setMin(pm.getMinimumButtonBrightnessSetting());
+        mManualButtonBrightness.setValue(currentBrightness);
+        mManualButtonBrightness.setDefaultValue(customButtonBrightness);
 
             int currentTimeout = Settings.System.getInt(getContentResolver(),
                     Settings.System.BUTTON_BACKLIGHT_TIMEOUT, 0);
