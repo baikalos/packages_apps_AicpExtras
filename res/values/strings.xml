@@ -610,6 +610,7 @@
     <string name="theme_default">Automatic</string>
     <string name="theme_default_force">Default settings theme</string>
     <string name="theme_default_more_accent">More color</string>
+    <string name="theme_default_less_accent">Less color</string>
     <string name="theme_light">Light</string>
     <string name="theme_light_more_accent">Light with more color</string>
     <string name="theme_dark">Dark</string>
@@ -726,6 +727,7 @@
     <string name="unit_dpi">dpi</string>
     <string name="unit_px">px</string>
     <string name="unit_msec">ms</string>
+    <string name="unit_sec">s</string>
 
     <!-- Navigation -->
     <string name="category_navbar_layout">Layout</string>
@@ -1040,14 +1042,16 @@
     <string name="screen_state_toggles_location_title">Location</string>
     <string name="screen_state_toggles_twog">Switch to 2G</string>
     <string name="screen_state_toggles_twog_summary">Network mode will be switched to 2G on screen off</string>
+    <string name="screen_state_toggles_threeg">Switch to 3G</string>
+    <string name="screen_state_toggles_threeg_summary">Network mode will be switched to 3G on screen off</string>
     <string name="screen_state_toggles_gps">Disable GPS</string>
     <string name="screen_state_toggles_gps_summary">GPS based location service will be disabled on screen off</string>
     <string name="screen_state_toggles_mobile_data">Disable mobile data</string>
     <string name="screen_state_toggles_mobile_data_summary">Mobile data will be disabled on screen off</string>
-    <string name="screen_state_off_delay_title">Screen Off actions delay</string>
-    <string name="screen_state_off_delay_summary">Number of minutes to wait before performing actions after screen off</string>
-    <string name="screen_state_on_delay_title">Screen On actions delay</string>
-    <string name="screen_state_on_delay_summary">Number of minutes to wait before performing actions after screen on</string>
+    <string name="screen_state_off_delay_title">Off actions delay</string>
+    <string name="screen_state_off_delay_summary">Number of seconds to wait before performing actions after screen off</string>
+    <string name="screen_state_on_delay_title">On actions delay</string>
+    <string name="screen_state_on_delay_summary">Number of seconds to wait before performing actions after screen on</string>
 
     <!-- Swap hw keys -->
     <string name="swap_navigation_keys_title">Swap hardware buttons</string>
@@ -1538,6 +1542,7 @@
     <string name="fod_recog_animation_op_mclaren">OP - McLaren</string>
     <string name="fod_recog_animation_pureview_future">PureView - Future</string>
     <string name="fod_recog_animation_pureview_molecular">PureView - Molecular</string>
+    <string name="fod_recog_animation_op_energy">OP8 - ENERGY</string>
 
     <!-- Kill app long-press back -->
     <string name="kill_app_longpress_back">Kill app back button</string>
@@ -1559,4 +1564,8 @@
     <string name="ringtone_focus_mode_title">Ringtone audio focus</string>
     <string name="ringtone_focus_mode_dynamic">Headset only if music is active</string>
     <string name="ringtone_focus_mode_stock">Both speaker and headset</string>
+
+    <!-- OOS clear all button -->
+    <string name="enable_clear_all_button">Replace clear all text with nice button</string>
+    <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
 </resources>
