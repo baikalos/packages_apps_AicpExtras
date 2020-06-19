@@ -118,7 +118,7 @@ public abstract class Util {
    }
 
    public static String getDownloadLinkForDevice(Context context) {
-        return "http://dl.baikalos.ru/" + getDevice(context);
+        return "http://dl.baikalos.ru/BaikalOS-10/" + getDevice(context);
    }
 
    public static String readStringFromFile(File inputFile) throws IOException {
