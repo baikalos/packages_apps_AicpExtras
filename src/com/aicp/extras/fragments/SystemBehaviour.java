@@ -56,6 +56,7 @@ public class SystemBehaviour extends BaseSettingsFragment
         super.onCreate(savedInstanceState);
 
         // SELinux
+        /*
         Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
         mSelinuxMode = (SwitchPreference) findPreference(Constants.PREF_SELINUX_MODE);
         mSelinuxMode.setChecked(SELinux.isSELinuxEnforced());
@@ -67,6 +68,7 @@ public class SystemBehaviour extends BaseSettingsFragment
                 .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
                 .contains(Constants.PREF_SELINUX_MODE));
         Util.requireRoot(getActivity(), selinuxCategory);
+        */
 
         Util.requireConfig(getActivity(), findPreference(KEY_BARS),
                 com.android.internal.R.bool.config_haveHigherAspectRatioScreen, true, false);
@@ -77,6 +79,7 @@ public class SystemBehaviour extends BaseSettingsFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        /*
         if (preference == mSelinuxMode) {
             if ((Boolean) newValue) {
                 new SwitchSelinuxTask(getActivity()).execute(true);
@@ -90,6 +93,7 @@ public class SystemBehaviour extends BaseSettingsFragment
             setSelinuxEnabled(mSelinuxMode.isChecked(), (Boolean) newValue);
             return true;
         }
+        */
         return false;
     }
 

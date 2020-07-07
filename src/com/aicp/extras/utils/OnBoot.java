@@ -34,6 +34,7 @@ public class OnBoot extends BroadcastReceiver {
                 mSetupRunning = true;
             }
         }
+        /*
 
         if(!mSetupRunning) {
             try {
@@ -75,6 +76,7 @@ public class OnBoot extends BroadcastReceiver {
                 }
             }
         }
+        */
     }
 
     private void showToast(String toastString, Context context) {
