@@ -713,7 +713,7 @@
     <string name="navigation_title">Navigation</string>
     <string name="navigation_summary">Configure various navigation behaviors</string>
     <string name="navigation_bar_invert_layout_title">Invert layout</string>
-    <string name="navigation_footer">IMPORTANT: Disabling navigation bar also disables all on-screen navigation including gestures!</string>
+    <string name="navigation_footer">IMPORTANT: Disabling on-screen navigation disables all on-screen navigation options including gestures!</string>
 
     <!-- OP like navigation gestures -->
     <string name="gesture_settings_title">Navigation Gestures</string>
@@ -735,6 +735,9 @@
     <!-- Navigation -->
     <string name="category_navbar_layout">Layout</string>
     <string name="navigation_bar_title">On-screen navigation bar</string>
+    <string name="navbar_visibility">On-screen navigation</string>
+    <string name="navbar_visibility_summary">Toggle to enable, click for options</string>
+    <string name="navbar_visibility_footer">Various options only applicable in 2- or 3-button navigation mode</string>
     <string name="navigation_bar_summary">Toggle to enable onscreen navigation bar</string>
     <string name="navigation_bar_layout_title">Layout</string>
     <string name="navigation_bar_layout_summary">Customize the layout of the navigation bar</string>
@@ -809,7 +812,6 @@
     <string name="navbar_size">Bar size</string>
     <string name="navbar_mode">Navigation mode</string>
     <string name="navbar_mode_summary">Select navigation mode for device</string>
-    <string name="navbar_visibility">Enable navigation bar</string>
     <string name="navigationbar_settings_summary">Customize navigation style and behavior</string>
     <string name="navbar_general_title">Advanced</string>
     <string name="navigation_bar_left_title">Left-handed mode</string>
@@ -912,27 +914,30 @@
     <!-- Pulse navigation bar music visualizer -->
     <string name="pulse_help_policy_notice_summary">Pulse does not work with some audio sources when listening on device speaker</string>
     <string name="pulse_settings">Pulse</string>
-    <string name="pulse_settings_summary">Navigation bar audio graphic equalizer</string>
-    <string name="fling_show_pulse_title">Allow Pulse</string>
-    <string name="fling_show_pulse_summary">Audio graphic equalizer on the navigation bar</string>
-    <string name="pulse_render_mode_title">Render mode</string>
+    <string name="pulse_settings_summary">Audio graphic equalizer. Click for options.</string>
+    <string name="show_pulse_title">Allow Pulse</string>
+    <string name="show_pulse_summary">Audio graphic equalizer on the navigation bar</string>
+    <string name="pulse_render_mode_title">Render</string>
     <string name="pulse_render_mode_fading_bars">Fading blocks</string>
     <string name="pulse_render_mode_solid_lines">Solid lines</string>
-    <string name="fling_pulse_color">Pulse color</string>
-    <string name="fling_pulse_color_summary">Used also as fallback for automatic color</string>
-    <string name="eos_fling_lavalamp_title">Turn on Lava Lamp</string>
-    <string name="eos_fling_lavalamp_summary">Pulse animates a smooth lava lamp style color blend</string>
+    <string name="pulse_color">Color</string>
+    <string name="pulse_color_mode">Color mode</string>
+    <string name="pulse_color_accent">Accent</string>
+    <string name="pulse_color_custom">Custom</string>
+    <string name="pulse_color_lava_lamp">Lava lamp</string>
+    <string name="pulse_color_auto">Album art</string>
+    <string name="pulse_color_chooser">Choose color</string>
+    <string name="pulse_color_chooser_title">Select color for pulse</string>
+    <string name="smoothing_enabled_title">Turn on smoothing</string>
+    <string name="smoothing_enabled_summary">Each bar is animated more smoothly</string>
     <string name="pulse_advanced_category">Advanced</string>
     <string name="pulse_legacy_mode_advanced_category">Fading blocks mode settings</string>
     <string name="pulse_custom_fudge_factor">Sanity level</string>
-    <string name="lavamp_solid_speed_title">Lava Lamp speed</string>
+    <string name="lavamp_speed_title">Lava Lamp speed</string>
     <string name="pulse_solid_units_count">Solid lines count</string>
     <string name="pulse_solid_lines_count">Solid lines count</string>
     <string name="pulse_solid_units_opacity">Solid lines opacity</string>
     <string name="pulse_solid_dimen_category">Solid lines mode settings</string>
-    <string name="pulse_custom_buttons_opacity_title">Smartbar buttons opacity on Pulse</string>
-    <string name="pulse_auto_color_title">Automatic Pulse color</string>
-    <string name="pulse_auto_color_summary">Sync color with album arts. Overrides Lava Lamp and lines opacity.</string>
     <string name="pulse_blacklist_title">Apps blacklist</string>
     <string name="pulse_blacklist_summary">Apps to be skipped for Pulse</string>
     <string name="pulse_blacklist_apps_cat_title">Blacklist</string>
@@ -1605,4 +1610,8 @@
     <!-- QS Battery toggle -->
     <string name="qs_header_battery_title">Battery info</string>
     <string name="qs_header_battery_summary">Enable for percentage, disable for time estimate.</string>
+
+    <!-- Show VoWiFi icon -->
+    <string name="vowifi_switch_title">VoWiFi icon</string>
+    <string name="vowifi_switch_summary">Display VoWiFi icon</string>
 </resources>

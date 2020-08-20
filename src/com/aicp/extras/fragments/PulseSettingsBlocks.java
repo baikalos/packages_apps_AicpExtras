@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010 The Android Open Source Project
+ * Copyright (C) 2020 Android Ice Cold Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,31 +14,16 @@
  * limitations under the License.
  */
 
+
 package com.aicp.extras.fragments;
 
-import android.os.Bundle;
-import androidx.preference.Preference;
-import androidx.preference.Preference.OnPreferenceClickListener;
-
-import com.aicp.extras.R;
 import com.aicp.extras.BaseSettingsFragment;
+import com.aicp.extras.R;
 
-public class PieControl extends BaseSettingsFragment implements
-        OnPreferenceClickListener {
-    private static final String TAG = "PieControl";
+public class PulseSettingsBlocks extends BaseSettingsFragment {
 
     @Override
     protected int getPreferenceResource() {
-        return R.xml.pie_control;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-    @Override
-    public boolean onPreferenceClick(Preference preference) {
-      return true;
+        return R.xml.pulse_settings_blocks;
     }
 }

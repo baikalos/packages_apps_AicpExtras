@@ -19,7 +19,7 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="navigation_bar"
-    android:title="@string/navigation_bar_title" >
+    android:title="@string/navbar_visibility" >
 
     <PreferenceCategory
         android:key="category_navbar_layout">
@@ -37,6 +37,18 @@
             android:key="sysui_nav_bar_inverse"
             android:title="@string/navigation_bar_invert_layout_title"
             android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_navbar_pulse">
+
+        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+            android:key="navbar_pulse_enabled"
+            android:title="@string/pulse_settings"
+            android:summary="@string/pulse_settings_summary"
+            android:defaultValue="false"
+            android:fragment="com.aicp.extras.fragments.PulseSettings" />
 
     </PreferenceCategory>
 
@@ -129,4 +141,8 @@
             android:entryValues="@array/action_values" />
 
     </PreferenceCategory>
+
+    <com.android.settingslib.widget.FooterPreference
+        android:title="@string/navbar_visibility_footer" />
+
 </PreferenceScreen>
