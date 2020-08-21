@@ -70,12 +70,13 @@ public class SystemappRemover extends SubActivity {
         safetyList.add("PackageInstaller");
         safetyList.add("TelephonyProvider");
         safetyList.add("AicpExtras");
+        safetyList.add("BaikalExtras");
+        safetyList.add("BaikalDelta");
         safetyList.add("CMAudioService");
         safetyList.add("CMParts");
         safetyList.add("CMSettingsProvider");
         safetyList.add("ContactsProvider");
         safetyList.add("DefaultContainerService");
-        safetyList.add("Dialer");
         safetyList.add("DownloadProvider");
         safetyList.add("FusedLocation");
         safetyList.add("Keyguard");
