@@ -52,7 +52,7 @@ public class Dashboard extends BaseSettingsFragment {
             Constants.AICP_OTA_PACKAGE, Constants.AICP_OTA_ACTIVITY));
 
     private LongClickablePreference mAicpLogo;
-    private Preference mAicpOTA;
+    //private Preference mAicpOTA;
     private Preference mWeatherOption;
 
     private Random mRandom = new Random();
@@ -76,13 +76,14 @@ public class Dashboard extends BaseSettingsFragment {
          //     mWeatherOption.getParent().removePreference(mWeatherOption);
          // }
 
-        mAicpOTA = findPreference(PREF_AICP_OTA);
+        /*mAicpOTA = findPreference(PREF_AICP_OTA);
         if (!Util.isPackageEnabled(Constants.AICP_OTA_PACKAGE, pm)) {
             mAicpOTA.getParent().removePreference(mAicpOTA);
         }
 
         // Preference logIt = findPreference(PREF_LOG_IT);
         // Util.requireRoot(getActivity(), logIt);
+        */
 
         mAicpLogo.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
@@ -137,11 +138,11 @@ public class Dashboard extends BaseSettingsFragment {
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference == mAicpOTA || preference == mAicpLogo) {
+        /*if (preference == mAicpOTA || preference == mAicpLogo) {
             startActivity(INTENT_OTA);
             return true;
-        } else {
+        } else {*/
             return super.onPreferenceTreeClick(preference);
-        }
+        /*}*/
     }
 }

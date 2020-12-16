@@ -149,7 +149,7 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!-- PreferenceCategory
         android:title="@string/other_category">
 
         <PreferenceScreen
@@ -179,5 +179,5 @@
             android:icon="@drawable/ic_settings_ae_customization"
             android:fragment="com.aicp.extras.fragments.AeSettings" />
 
-    </PreferenceCategory>
+    </PreferenceCategory -->
 </PreferenceScreen>
