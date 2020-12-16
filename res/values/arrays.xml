@@ -328,25 +328,22 @@
         <item>1</item>
     </string-array>
 
-    <!-- SmartNav -->
+    <!-- HW Keys customization -->
     <string-array name="action_dialog_entries">
         <item>@string/action_entry_default_action</item>
         <item>@string/action_entry_custom_action</item>
         <item>@string/action_entry_select_app</item>
     </string-array>
-
-    <string-array name="action_dialog_values" translatable="false">
+     <string-array name="action_dialog_values" translatable="false">
         <item>@string/action_value_default_action</item>
         <item>@string/action_value_custom_action</item>
         <item>@string/action_value_select_app</item>
     </string-array>
-
-    <string-array name="action_dialog_no_default_entries">
+     <string-array name="action_dialog_no_default_entries">
         <item>@string/action_entry_custom_action</item>
         <item>@string/action_entry_select_app</item>
     </string-array>
-
-    <string-array name="action_dialog_no_default_values" translatable="false">
+     <string-array name="action_dialog_no_default_values" translatable="false">
         <item>@string/action_value_custom_action</item>
         <item>@string/action_value_select_app</item>
     </string-array>
@@ -474,6 +471,7 @@
     <!-- Battery styles -->
     <string-array name="battery_style_entries" translatable="false">
         <item>@string/status_bar_battery_style_q</item>
+        <item>@string/battery_style_solid</item>
         <item>@string/battery_style_circle</item>
         <item>@string/battery_style_dotted_circle</item>
         <item>@string/battery_style_big_circle</item>
@@ -481,6 +479,7 @@
      </string-array>
      <string-array name="battery_style_values" translatable="false">
         <item>8</item>
+        <item>6</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
@@ -1168,4 +1167,5 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+
 </resources>

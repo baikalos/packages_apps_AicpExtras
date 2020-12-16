@@ -81,7 +81,7 @@ public class StatusBar extends BaseSettingsFragment implements
 */
 
         // Quick Pulldown
-  /*      mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
+        mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
         int quickPulldownValue = Settings.System.getIntForUser(resolver,
                 Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
@@ -107,17 +107,17 @@ public class StatusBar extends BaseSettingsFragment implements
 
         mCustomCarrierLabel = (Preference) findPreference(KEY_CUSTOM_CARRIER_LABEL);
         updateCustomLabelTextSummary();
-/*
-        // Battery Percentage
+
+    /*     // Battery Percentage
         mShowBatteryPercentage = (SystemSettingIntListPreference) findPreference(KEY_BATTERY_PERCENTAGE);
         int showBatteryPercentage = Settings.System.getIntForUser(resolver,
                 Settings.System.SHOW_BATTERY_PERCENT, 0, UserHandle.USER_CURRENT);
         mShowBatteryPercentage.setOnPreferenceChangeListener(this);
 
-        // Battery estimate in Quick QS
+    /*    // Battery estimate in Quick QS
         mShowBatteryInQQS = (SystemSettingSwitchPreference) findPreference(KEY_ESTIMATE_IN_QQS);
         updateShowBatteryInQQS(showBatteryPercentage);
-        */
+    */
 
     /*    final String displayCutout = getResources().getString(
                 com.android.internal.R.string.config_mainBuiltInDisplayCutout);
@@ -135,20 +135,20 @@ public class StatusBar extends BaseSettingsFragment implements
             updateSmartPulldownSummary(value);
             return true;
         } else */
-      /*  if (preference == mQuickPulldown) {
+        if (preference == mQuickPulldown) {
             int quickPulldownValue = Integer.valueOf((String) newValue);
             Settings.System.putIntForUser(resolver, Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     quickPulldownValue, UserHandle.USER_CURRENT);
             updateQuickPulldownSummary(quickPulldownValue);
-            return true;/*
-        } else if (preference == mShowBatteryPercentage) {
-            int showBatteryPercentage = Integer.valueOf((String) newValue);
-            updateShowBatteryInQQS(showBatteryPercentage);
             return true;
-        } else */
-/*        } else if (preference == mShowCarrierLabel) {
+        } else if (preference == mShowCarrierLabel) {
             int value = Integer.parseInt((String) newValue);
             updateCarrierLabelSummary(value);
+            return true;
+        }
+/*        } else if (preference == mShowBatteryPercentage) {
+            int showBatteryPercentage = Integer.valueOf((String) newValue);
+            updateShowBatteryInQQS(showBatteryPercentage);
             return true;
         }*/
         return false;
@@ -158,7 +158,7 @@ public class StatusBar extends BaseSettingsFragment implements
     public boolean onPreferenceTreeClick(final Preference preference) {
         super.onPreferenceTreeClick(preference);
         final ContentResolver resolver = getActivity().getContentResolver();
-/*        if (KEY_CUSTOM_CARRIER_LABEL.equals(preference.getKey())) {
+        if (KEY_CUSTOM_CARRIER_LABEL.equals(preference.getKey())) {
             AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
             alert.setTitle(R.string.custom_carrier_label_title);
             alert.setMessage(R.string.custom_carrier_label_explain);
@@ -182,11 +182,11 @@ public class StatusBar extends BaseSettingsFragment implements
             alert.setNegativeButton(getString(android.R.string.cancel), null);
             alert.show();
             return true;
-        } else {*/
+        } else {
             return false;
-       // }
+        }
     }
-/*
+
     private void updateCarrierLabelSummary(int value) {
         Resources res = getResources();
 
@@ -219,7 +219,7 @@ public class StatusBar extends BaseSettingsFragment implements
     }
 */
 
-    /*private void updateQuickPulldownSummary(int value) {
+    private void updateQuickPulldownSummary(int value) {
         Resources res = getResources();
 
         if (value == 0) {

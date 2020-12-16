@@ -33,20 +33,19 @@ import com.aicp.extras.utils.SuShell;
 import com.aicp.extras.utils.SuTask;
 import com.aicp.extras.utils.Util;
 
-public class SystemBehaviour {
-// public class SystemBehaviour extends BaseSettingsFragment
+ public class SystemBehaviour extends BaseSettingsFragment {
 //         implements Preference.OnPreferenceChangeListener {
-/*
     private static final String TAG = SystemBehaviour.class.getSimpleName();
 
     private static final String KEY_SMART_PIXELS = "smart_pixels_enable";
+/*
     private static final String KEY_AUDIO_PANEL_POSITION = "volume_panel_on_left";
     private static final String KEY_BARS = "bars_settings";
     private static final String SELINUX_CATEGORY = "selinux";
 
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
-
+*/
     @Override
     protected int getPreferenceResource() {
         return R.xml.system_behaviour;
@@ -55,7 +54,7 @@ public class SystemBehaviour {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+/*
         // SELinux
         Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
         mSelinuxMode = (SwitchPreference) findPreference(Constants.PREF_SELINUX_MODE);
@@ -71,11 +70,12 @@ public class SystemBehaviour {
 
         Util.requireConfig(getActivity(), findPreference(KEY_BARS),
                 com.android.internal.R.bool.config_haveHigherAspectRatioScreen, true, false);
-
+*/
         Util.requireConfig(getActivity(), findPreference(KEY_SMART_PIXELS),
                 com.android.internal.R.bool.config_enableSmartPixels, true, false);
-    }
 
+    }
+/*
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mSelinuxMode) {

@@ -35,7 +35,8 @@
     <string name="status_bar_battery_summary">Click for battery icon display options</string>
     <string name="battery_style_title">Battery icon style</string>
     <string name="battery_style_summary">Options for status bar battery style</string>
-    <string name="battery_style_port">Portrait (P)</string>
+    <string name="battery_style_port">Portrait</string>
+    <string name="battery_style_solid">Solid</string>
     <string name="battery_style_circle">Circle</string>
     <string name="battery_style_dotted_circle">Dotted circle</string>
     <string name="battery_style_big_circle">Big circle</string>
@@ -223,8 +224,15 @@
     <string name="force_expanded_notifications_summary">Available only for apps that support expanded notifications</string>
 
     <!-- Notification guts kill app button -->
-    <string name="notification_guts_kill_app_button_title">Kill app button</string>
-    <string name="notification_guts_kill_app_button_summary">Show a kill app button in the notification\'s longpress menu</string>
+    <string name="category_guts_buttons_title">Aditional buttons</string>
+
+    <!-- Notification guts kill app button -->
+    <string name="notification_guts_kill_app_button_title">Kill app to notifications</string>
+    <string name="notification_guts_kill_app_button_summary">Show a kill app button in the notification\'s longpress view</string>
+
+    <!-- Conversation guts kill app button -->
+    <string name="conversation_guts_kill_app_button_title">Kill app to conversations</string>
+    <string name="conversation_guts_kill_app_button_summary">Show a kill app button in the conversation \'s longpress view</string>
 
     <!-- Quick settings -->
     <string name="quick_settings_title">Quick settings</string>
@@ -799,12 +807,6 @@
     <string name="action_skip_song">Skip song</string>
     <string name="action_prev_song">Previous song</string>
 
-    <!-- DUI -->
-    <string name="picker_activities">Activities</string>
-    <string name="select_custom_app_title">Select custom app</string>
-    <string name="select_custom_activity_title">Select custom activity</string>
-    <string name="profile_applist_title">Applications</string>
-
     <!-- SmartNav -->
     <string name="bottom_nav_navigation_title">Navigation</string>
     <string name="navbar_interface_title">Interface</string>
@@ -840,6 +842,27 @@
     <string name="action_value_recent_apps" translatable="false">task_recents</string>
     <string name="action_value_voice_search" translatable="false">task_voice_search</string>
     <string name="action_value_menu" translatable="false">task_menu</string>
+
+    <!-- HW Keys customization -->
+    <string name="picker_activities">Activities</string>
+    <string name="select_custom_app_title">Select custom app</string>
+    <string name="select_custom_activity_title">Select custom activity</string>
+    <string name="profile_applist_title">Applications</string>
+    <string name="hardware_keys_home_key_title">Home button</string>
+    <string name="hardware_keys_menu_key_title">Menu button</string>
+    <string name="hardware_keys_assist_key_title">Search button</string>
+    <string name="hardware_keys_appswitch_key_title">Overview button</string>
+    <string name="hardware_keys_back_key_title">Back button</string>
+    <string name="hardware_keys_double_tap_summary">Set double tap action</string>
+    <string name="hardware_keys_single_tap_summary">Set single tap action</string>
+    <string name="hardware_keys_long_press_summary">Set long press action</string>
+    <string name="hardware_keys_single_tap_title">Single tap action</string>
+    <string name="hardware_keys_long_press_title">Long press action</string>
+    <string name="hardware_keys_double_tap_title">Double tap action</string>
+    <string name="hardware_keys_disable_title">Disable buttons</string>
+    <string name="hardware_keys_volume_keys_title">Volume rocker</string>
+    <string name="hardware_keys_category">Hardware buttons</string>
+    <string name="hardware_keys_title">Customize buttons</string>
 
     <!-- Fling -->
     <string name="fling_settings">Fling settings</string>
@@ -1070,8 +1093,8 @@
 
     <!-- Ambient display music ticker -->
     <string name="force_ambient_for_media_pref_title">Ambient music ticker</string>
-    <string name="force_ambient_for_media_pref_summary">Configure the Ambient music ticker</string>
-    <string name="ambient_ticker_footer">Ambient Music Ticker shows playing music track info within Ambient display screen.\n\nIt\'s triggered also if Ambient Display is disabled when a new track is started, forcing a clean ambient screen with track info in the middle of the screen.\n\nYou can also double tap on track info to skip track.\n\nIf you own a Pixel and enable Now Playing and its notification in system Audio settings, Ambient Music Ticker will also work within it.</string>
+    <string name="force_ambient_for_media_pref_summary">Enable to show active music track info in Ambient display</string>
+    <string name="ambient_ticker_footer">Ambient Music Ticker shows playing music track info within Ambient display screen.\n\nIt\'s triggered also if Ambient Display is disabled when a new track is started, forcing a clean ambient screen with track info in the middle of the screen.\n\nYou can also tap on track info to skip track.\n\nIf you own a Pixel and enable Now Playing and its notification in system Audio settings, Ambient Music Ticker will also work within it.</string>
     <string name="force_ambient_for_media_title">Enable</string>
 
     <!-- Screen Off animation -->
@@ -1266,23 +1289,13 @@
     <!-- Battery light settings  -->
     <string name="battery_light_title">Battery LED</string>
     <string name="battery_light_summary">LED color while charging</string>
-    <string name="battery_low_pulse_title">Pulse if battery low</string>
-    <string name="battery_light_only_full_charge_title">Only light up when fully charged</string>
-    <string name="battery_light_list_title">Colors</string>
-    <string name="battery_light_low_color_title">Battery low</string>
-    <string name="battery_light_medium_color_title">Charging</string>
-    <string name="battery_light_full_color_title">Charged (90%)</string>
-    <string name="battery_light_really_full_color_title">Charged (100%)</string>
-    <string name="fast_color_cat_title">Fast charging</string>
-    <string name="fast_charging_led_enabled_title">Enable fast charging color</string>
-    <string name="fast_charging_led_enabled_summary">When fast charging, use different color till 90% charged</string>
-    <string name="fast_charging_light_color_title">Color</string>
-    <string name="fast_charging_light_color_summary"></string>
-    <string name="battery_light_blend_category">Blend colors</string>
-    <string name="battery_light_blend_title">Enable color blend</string>
-    <string name="battery_light_blend_summary">Gradually change colors between full and empty</string>
-    <string name="battery_light_blend_colors_title">Color selection</string>
-    <string name="battery_light_blend_colors_summary">Color range used when blending colors</string>
+    <string name="battery_light_allow_on_dnd_title">Battery light in Do Not Disturb mode</string>
+    <string name="battery_light_low_blinking_title">Blinking light on low battery</string>
+    <string name="battery_light_cat">Battery light color when charging</string>
+    <string name="battery_light_low_color">Low battery</string>
+    <string name="battery_light_medium_color">Medium battery</string>
+    <string name="battery_light_full_color">Almost fully charged (90%)</string>
+    <string name="battery_light_reallyfull_color">Full charged battery (%100)</string>
 
     <!-- App Ops-->
     <string name="app_ops_settings_summary">Control apps permissions</string>
@@ -1311,22 +1324,6 @@
     <!-- SystemUI Tuner -->
     <string name="systemui_tuner_title">SystemUI Tuner</string>
     <string name="systemui_tuner_summary">Experimental SystemUI Tweaks</string>
-
-    <!-- Hardware button navigation -->
-    <string name="hardware_keys_volume_keys_title">Volume rocker</string>
-    <string name="hardware_keys_home_key_title">Home button</string>
-    <string name="hardware_keys_menu_key_title">Menu button</string>
-    <string name="hardware_keys_assist_key_title">Search button</string>
-    <string name="hardware_keys_appswitch_key_title">Overview button</string>
-    <string name="hardware_keys_back_key_title">Back button</string>
-    <string name="hardware_keys_double_tap_summary">Set double tap action</string>
-    <string name="hardware_keys_single_tap_summary">Set single tap action</string>
-    <string name="hardware_keys_long_press_summary">Set long press action</string>
-    <string name="hardware_keys_single_tap_title">Single tap action</string>
-    <string name="hardware_keys_long_press_title">Long press action</string>
-    <string name="hardware_keys_double_tap_title">Double tap action</string>
-    <string name="hardware_keys_category">Hardware buttons</string>
-    <string name="hardware_keys_disable_title">Disable hardware navigation buttons</string>
 
     <!-- doze on charge -->
     <string name="doze_on_charge_title">AOD on charging</string>
@@ -1566,10 +1563,6 @@
     <string name="show_media_heads_up_title">Show media heads up</string>
     <string name="show_media_heads_up_summary">Show media heads up when a new track is played, if the player is not already in foreground</string>
 
-    <!-- R Notification headers -->
-    <string name="notification_headers_title">Show notification headers</string>
-    <string name="notification_headers_summary">Whether to show R style notification headers (Requires a SystemUI restart)</string>
-
     <!-- AICP ad-blocker -->
     <string name="hosts_block_title">Ad-block</string>
     <string name="hosts_block_summary">Block ads with a modified hosts file. Turn off to use third party solutions or if apps cause issues.</string>
@@ -1616,5 +1609,21 @@
 
     <!-- Show VoWiFi icon -->
     <string name="vowifi_switch_title">VoWiFi icon</string>
-    <string name="vowifi_switch_summary">Display VoWiFi icon</string>
+    <string name="vowifi_switch_summary">Display VoWiFi icon when available</string>
+
+    <!-- VoWiFi icon -->
+    <string name="vowifi_icon_title">VoWiFi icon</string>
+    <string name="vowifi_icon_summary">Display VoWiFi icon when available</string>
+    <string name="volte_vowifi_override_title">VoWiFi override</string>
+    <string name="volte_vowifi_override_summary">Hide VoLTE when VoWiFi is available. This also overrides old style signal icon for VoWiFi.</string>
+
+    <string name="category_lockscreen_items_title">Items</string>
+    <string name="category_lockscreen_items_summary">Various lockscreen items</string>
+
+    <string name="category_lockscreen_gestures_title">Gestures</string>
+    <string name="category_lockscreen_gestures_summary">Configure available lockscreen gestures</string>
+
+    <!-- Notification headers -->
+    <string name="notification_headers_title">Notification Headers</string>
+    <string name="notification_headers_summary">Show headers in the notification shade\nRequires a SystemUI restart</string>
 </resources>

@@ -22,7 +22,7 @@
     android:key="quick_settings"
     android:title="@string/quick_settings_title">
 
-    <!-- <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="qs_tile_title_visibility"
         android:title="@string/qs_tile_title_visibility_title"
         android:summary="@string/qs_tile_title_visibility_summary"
@@ -34,7 +34,7 @@
         android:summary="@string/qs_vibrate_summary"
         android:defaultValue="false" />
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <!--<com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="hide_tile_expand_indicator"
         android:title="@string/hide_tile_expand_indicator_title"
         android:summary="@string/hide_tile_expand_indicator_summary"
@@ -45,19 +45,18 @@
         android:title="@string/qs_running_services_title"
         android:summary="@string/qs_running_services_summary"
         android:defaultValue="false" />
-
+-->
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="music_tile_title"
         android:title="@string/qs_music_tile_track_optional_title"
         android:summary="@string/qs_music_tile_track_optional_summary"
-        android:defaultValue="false"
-        android:dependency="qs_tile_title_visibility" />
+        android:defaultValue="false" />
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+<!--     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="dismiss_all_button"
         android:title="@string/enable_clear_all_button"
         android:summary="@string/enable_clear_all_button_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false" /> -->
 
     <PreferenceCategory
         android:key="qs_header_category"
@@ -83,7 +82,6 @@
             android:entries="@array/qs_datausage_entries"
             android:entryValues="@array/qs_datausage_values"
             android:defaultValue="0" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -101,7 +99,7 @@
            android:title="@string/footer_text_label_title"
            android:dependency="footer_text_show" />
 
-     </PreferenceCategory>
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="qs_layout_category"
@@ -126,7 +124,7 @@
             android:key="qs_layout_rows"
             android:title="@string/qs_rows_portrait_title"
             android:max="5"
-            android:min="2"
+            android:min="3"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
             android:defaultValue="3" />
@@ -134,7 +132,7 @@
         <com.aicp.gear.preference.SystemSettingSeekBarPreference
             android:key="qs_layout_rows_landscape"
             android:title="@string/qs_rows_landscape_title"
-            android:max="4"
+            android:max="3"
             android:min="2"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
@@ -153,12 +151,12 @@
             android:key="qs_layout_columns_landscape"
             android:title="@string/qs_columns_landscape_title"
             android:max="8"
-            android:min="3"
+            android:min="4"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
-            android:defaultValue="3" />
+            android:defaultValue="4" />
     </PreferenceCategory>
-
+<!--
     <PreferenceCategory
         android:key="qs_panel_translucency"
         android:title="@string/qs_panel_translucency_category_title">
@@ -178,7 +176,7 @@
             aicpextras:unitsRight="%"
             android:defaultValue="60" />
     </PreferenceCategory>
-
+ -->
       <PreferenceCategory
         android:key="category_custom_header"
         android:title="@string/custom_header_title">
@@ -228,5 +226,5 @@
             aicpextras:unitsRight="@string/unit_percent"
             android:defaultValue="0"
             android:dependency="status_bar_custom_header" />
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 </PreferenceScreen>

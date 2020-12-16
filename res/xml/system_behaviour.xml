@@ -35,7 +35,7 @@
         android:fragment="com.android.settings.applications.appops.AppOpsDetails">
         <intent android:action="android.settings.APP_OPS_SETTINGS" />
     </Preference>
-
+-->
     <com.aicp.extras.preference.HostnamePreference
         android:key="device_hostname"
         android:title="@string/device_hostname"
@@ -47,7 +47,7 @@
         android:imeOptions="actionDone"
         android:inputType="textNoSuggestions"
         android:persistent="false" />
-
+<!--
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="media_scanner_on_boot"
         android:dialogTitle="@string/media_scanner_on_boot_title"
@@ -76,6 +76,7 @@
         android:summary="@string/one_hand_mode_enabled_summary"
         android:defaultValue="false" />
 
+-->
 
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
@@ -83,14 +84,13 @@
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
 
-    <!- Smart Pixels ->
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="smart_pixels_enable"
         android:title="@string/smart_pixels_title"
         android:summary="@string/smart_pixels_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SmartPixels" />
-
+<!--
     <PreferenceCategory
         android:key="system_ss_category"
         android:title="@string/system_ss_category_title">
@@ -102,7 +102,7 @@
             android:summary="@string/screenshot_sound_summary"
             android:defaultValue="true" />
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:title="@string/audio_panel_view">
 
@@ -111,7 +111,7 @@
         android:title="@string/audio_panel_position_title"
         android:summary="@string/audio_panel_position_summary"
         android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
-
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="audio_panel_view_media"
         android:title="@string/audio_panel_view_media_title"
@@ -142,8 +142,9 @@
         android:key="audio_panel_view_bt_sco"
         android:title="@string/audio_panel_view_bt_sco_title"
 	android:defaultValue="false"/>
+-->
   </PreferenceCategory>
-
+<!--
     <!- SELinux ->
     <PreferenceCategory
         android:key="selinux"

@@ -33,11 +33,11 @@ import com.aicp.gear.util.AicpContextConstants;
 
 public class Lockscreen extends BaseSettingsFragment {
 
-    //private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
+    private static final String FP_SUCCESS_VIBRATION = "fingerprint_success_vib";
     //private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
 
-    //private FingerprintManager mFingerprintManager;
-    //private SwitchPreference mFingerprintVib;
+    private FingerprintManager mFingerprintManager;
+    private SwitchPreference mFingerprintVib;
 
     @Override
     protected int getPreferenceResource() {
@@ -48,9 +48,9 @@ public class Lockscreen extends BaseSettingsFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         PreferenceScreen prefSet = getPreferenceScreen();
-        //ontentResolver resolver = getActivity().getContentResolver();
+        ContentResolver resolver = getActivity().getContentResolver();
 
-        /*try {
+        try {
             mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         } catch (Exception e) {
             //ignore
@@ -62,7 +62,7 @@ public class Lockscreen extends BaseSettingsFragment {
         }
 
         // FOD category
-        PreferenceCategory fodIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);
+/*        PreferenceCategory fodIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);
         PackageManager packageManager = getContext().getPackageManager();
         boolean supportsFod = packageManager.hasSystemFeature(AicpContextConstants.Features.FOD);
 

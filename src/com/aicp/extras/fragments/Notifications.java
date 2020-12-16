@@ -32,11 +32,11 @@ import com.aicp.gear.preference.SystemSettingIntListPreference;
 import com.aicp.gear.preference.SystemSettingSeekBarPreference;
 import com.android.internal.util.aicp.DeviceUtils;
 
-public class Notifications {/*
 public class Notifications extends BaseSettingsFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
+    private static final String KEY_RINGTONE_FOCUS = "ringtone_focus_mode";
     private static final String CAT_NOTIFICATION_FLASHLIGHT = "notification_flash";
     private static final String PREF_FLASHLIGHT_ON_CALL = "flashlight_on_call";
     private static final String PREF_FLASHLIGHT_ON_CALL_WAITING = "flashlight_on_call_waiting";
@@ -47,7 +47,6 @@ public class Notifications extends BaseSettingsFragment implements
     private SwitchPreference mFlashOnCallIgnoreDND;
     private SystemSettingIntListPreference mFlashOnCall;
     private SystemSettingSeekBarPreference mFlashOnCallRate;
-
     @Override
     protected int getPreferenceResource() {
         return R.xml.notifications;
@@ -56,10 +55,10 @@ public class Notifications extends BaseSettingsFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+/*
         Util.requireFullStatusbar(getActivity(),
                 findPreference(Settings.System.STATUS_BAR_SHOW_TICKER));
-
+*/
         mFlashOnCallWaiting = (SwitchPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_WAITING);
         mFlashOnCallIgnoreDND = (SwitchPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_IGNORE_DND);
         mFlashOnCallRate = (SystemSettingSeekBarPreference) getPreferenceScreen().findPreference(PREF_FLASHLIGHT_ON_CALL_RATE);
@@ -75,17 +74,18 @@ public class Notifications extends BaseSettingsFragment implements
                     CAT_NOTIFICATION_FLASHLIGHT));
         }
 
-        boolean alertSliderAvailable = getActivity().getResources().getBoolean(
-                com.android.internal.R.bool.config_hasAlertSlider);
-        if (!alertSliderAvailable)
-            getPreferenceScreen().removePreference(findPreference(ALERT_SLIDER_PREF));
+        Util.requireConfig(getActivity(), findPreference(ALERT_SLIDER_PREF),
+                com.android.internal.R.bool.config_hasAlertSlider, true, false);
 
+        Util.requireConfig(getActivity(), findPreference(KEY_RINGTONE_FOCUS),
+                com.android.internal.R.bool.config_deviceRingtoneFocusMode, true, false);
     }
 
     private void updateDependencies(boolean enabled) {
         mFlashOnCallWaiting.setEnabled(enabled);
         mFlashOnCallIgnoreDND.setEnabled(enabled);
         mFlashOnCallRate.setEnabled(enabled);
+
     }
 
     @Override
@@ -97,5 +97,5 @@ public class Notifications extends BaseSettingsFragment implements
             return true;
         }
         return false;
-    }*/
+    }
 }

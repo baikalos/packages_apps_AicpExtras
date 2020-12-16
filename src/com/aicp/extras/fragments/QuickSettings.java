@@ -49,7 +49,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class QuickSettings {/*
 public class QuickSettings extends BaseSettingsFragment
     implements OnPreferenceChangeListener {
 
@@ -75,6 +74,8 @@ public class QuickSettings extends BaseSettingsFragment
     private SwitchPreference mQQSColsAuto;
     private SystemSettingSeekBarPreference mQQSColsCount;
 
+    private String mCustomFooterText;
+
     private Preference mHeaderBrowse;
     private ListPreference mDaylightHeaderPack;
     private SystemSettingSeekBarPreference mHeaderShadow;
@@ -82,8 +83,6 @@ public class QuickSettings extends BaseSettingsFragment
     private String mDaylightHeaderProvider;
     private Preference mFileHeader;
     private String mFileHeaderProvider;
-
-    private String mCustomFooterText;
 
     @Override
     protected int getPreferenceResource() {
@@ -141,15 +140,15 @@ public class QuickSettings extends BaseSettingsFragment
 
         mFileHeader = findPreference(FILE_HEADER_SELECT);
         mFileHeader.setEnabled(providerName.equals(mFileHeaderProvider));
-/*        mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
+
+        mQQSColsAuto = (SwitchPreference) findPreference(QS_QUICKBAR_COLUMNS_AUTO);
         mQQSColsCount = (SystemSettingSeekBarPreference) findPreference(QS_QUICKBAR_COLUMNS_COUNT);
 
         boolean qqsColsAutoEnabled = Settings.System.getInt(resolver,
-                Settings.System.AICP_QS_QUICKBAR_COLUMNS, 6) == -1;
+                Settings.System.QS_QUICKBAR_COLUMNS, 6) == -1;
         mQQSColsAuto.setChecked(qqsColsAutoEnabled);
         mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
         mQQSColsAuto.setOnPreferenceChangeListener(this);
-        *//*
     }
 
     private void updateHeaderProviderSummary(boolean headerEnabled) {
@@ -213,22 +212,19 @@ public class QuickSettings extends BaseSettingsFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        /*
-        if (preference == mQQSColsAuto) {
-            Boolean qqsColsAutoEnabled = (Boolean) newValue;
-            mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
-            if (qqsColsAutoEnabled){
-              Settings.System.putInt(resolver,
-                      Settings.System.AICP_QS_QUICKBAR_COLUMNS, -1);
-            }
-            return true;
-        }
-        *//*
         if (preference == mHeaderShadow) {
             Integer headerShadow = (Integer) newValue;
             int realHeaderValue = (int) (((double) headerShadow / 100) * 255);
             Settings.System.putInt(resolver,
                     Settings.System.OMNI_STATUS_BAR_CUSTOM_HEADER_SHADOW, realHeaderValue);
+            return true;
+        } else if (preference == mQQSColsAuto) {
+            Boolean qqsColsAutoEnabled = (Boolean) newValue;
+            mQQSColsCount.setEnabled(!qqsColsAutoEnabled);
+            if (qqsColsAutoEnabled){
+              Settings.System.putInt(resolver,
+                      Settings.System.QS_QUICKBAR_COLUMNS, -1);
+            }
             return true;
         } else if (preference == mDaylightHeaderPack) {
             String value = (String) newValue;
@@ -285,7 +281,7 @@ public class QuickSettings extends BaseSettingsFragment
                             updateCustomFooterTextSummary();
 /*                            Intent i = new Intent();
                             i.setAction(Intent.ACTION_CUSTOM_CARRIER_LABEL_CHANGED);
-                            getActivity().sendBroadcast(i);*//*
+                            getActivity().sendBroadcast(i);*/
                         }
                     });
             alert.setNegativeButton(getString(android.R.string.cancel), null);
@@ -334,5 +330,5 @@ public class QuickSettings extends BaseSettingsFragment
         } else {
             mCustomFooterTextPref.setSummary(mCustomFooterText);
         }
-    }*/
+    }
 }

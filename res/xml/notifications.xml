@@ -29,7 +29,7 @@
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.StatusBarTicker"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
-
+-->
     <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
         android:key="heads_up_notifications_enabled"
         android:title="@string/notification_heads_up_title"
@@ -38,26 +38,13 @@
         android:fragment="com.aicp.extras.fragments.HeadsUpOptions"
         aicpextras:thereCanBeOnlyOneGroupId="1" />
 
-    <PreferenceScreen
-        android:key="headsup_activity_blacklist"
-        android:fragment="com.aicp.extras.fragments.HeadsUpActivityBlacklist"
-        android:title="@string/headsup_activity_blacklist_title"
-        android:summary="@string/headsup_activity_blacklist_summary"
-        android:dependency="heads_up_notifications_enabled"
-        android:persistent="false" />
-
-
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="force_expanded_notifications"
         android:title="@string/force_expanded_notifications_title"
         android:summary="@string/force_expanded_notifications_summary"
         android:defaultValue="false" />
-
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="notification_guts_kill_app_button"
-        android:title="@string/notification_guts_kill_app_button_title"
-        android:summary="@string/notification_guts_kill_app_button_summary"
-        android:defaultValue="false" />
+-->
 
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="battery_light_enabled"
@@ -72,6 +59,18 @@
         android:summary="@string/notification_sound_vib_screen_on_summary"
         android:defaultValue="true" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="notification_headers"
+        android:title="@string/notification_headers_title"
+        android:summary="@string/notification_headers_summary"
+        android:defaultValue="true" />
+
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="vibrate_on_notifications"
+        android:title="@string/vibrate_on_notifications_title"
+        android:summary="@string/vibrate_on_notifications_summary"
+        android:defaultValue="true" />
+
     <com.aicp.gear.preference.SystemSettingIntListPreference
         android:key="mute_annoying_notifications_threshold"
         android:title="@string/less_notification_sounds_title"
@@ -80,6 +79,36 @@
         android:entryValues="@array/less_notification_sounds_values"
         android:defaultValue="0" />
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="alert_slider_notifications"
+        android:title="@string/alert_slider_notifications_title"
+        android:summary="@string/alert_slider_notifications_summary"
+        android:defaultValue="true" />
+
+    <com.aicp.gear.preference.GlobalSettingListPreference
+        android:key="ringtone_focus_mode"
+        android:title="@string/ringtone_focus_mode_title"
+        android:entries="@array/ringtone_focus_mode_entries"
+        android:entryValues="@array/ringtone_focus_mode_values"
+        android:defaultValue="1" />
+
+    <PreferenceCategory
+        android:key="notification_buttons"
+        android:title="@string/category_guts_buttons_title" >
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="conversation_guts_kill_app_button"
+            android:title="@string/conversation_guts_kill_app_button_title"
+            android:summary="@string/conversation_guts_kill_app_button_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="notification_guts_kill_app_button"
+            android:title="@string/notification_guts_kill_app_button_title"
+            android:summary="@string/notification_guts_kill_app_button_summary"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="notification_headers"
         android:title="@string/notification_headers_title"
@@ -98,16 +127,9 @@
         android:summary="@string/alert_slider_notifications_summary"
         android:defaultValue="true" />
 
-    <com.aicp.gear.preference.GlobalSettingListPreference
-        android:key="ringtone_focus_mode"
-        android:title="@string/ringtone_focus_mode_title"
-        android:entries="@array/ringtone_focus_mode_entries"
-        android:entryValues="@array/ringtone_focus_mode_values"
-        android:defaultValue="1" />
-
     <com.android.settingslib.widget.FooterPreference
         android:title="@string/status_bar_show_ticker_footer" />
-
+-->
     <PreferenceCategory
         android:key="notification_flash"
         android:title="@string/notification_flash_title" >
@@ -139,5 +161,5 @@
             aicpextras:unitsLeft=""
             aicpextras:unitsRight="Hz"
             android:defaultValue="1" />
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 </PreferenceScreen>

@@ -21,7 +21,14 @@
     android:key="navigation_bar"
     android:title="@string/navbar_visibility" >
 
-    <!-- <PreferenceCategory
+<!--Arrow keys switch applies to both gestural and 2-3 button navigation -->
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="navigation_bar_menu_arrow_keys"
+        android:title="@string/navigation_bar_menu_arrow_keys_title"
+        android:summary="@string/navigation_bar_menu_arrow_keys_summary"
+        android:defaultValue="false" />
+
+    <PreferenceCategory
         android:key="category_navbar_layout">
 
         <Preference
@@ -39,7 +46,7 @@
             android:defaultValue="false" />
 
     </PreferenceCategory>
-
+<!--
     <PreferenceCategory
         android:key="category_navbar_pulse">
 
@@ -51,7 +58,7 @@
             android:fragment="com.aicp.extras.fragments.PulseSettings" />
 
     </PreferenceCategory>
-
+-->
     <PreferenceCategory
         android:key="back_key"
         android:title="@string/back_key_title">
