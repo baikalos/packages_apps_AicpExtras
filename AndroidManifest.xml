@@ -87,7 +87,13 @@
             </intent-filter>
         </activity>
 
-        <!-- receiver
+        <!-- activity
+            android:name=".romstats.AnonymousStats"
+            android:label="@string/anonymous_statistics_title"
+            android:exported="false" >
+        </activity>
+
+        <receiver
             android:name=".romstats.ReportingServiceManager"
             android:enabled="true"
             android:exported="false"
