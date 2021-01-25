@@ -20,12 +20,22 @@
     android:key="pulse_settings"
     android:title="@string/pulse_settings" >
 
-    <!-- <PreferenceCategory
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="lockscreen_pulse_enabled"
+        android:title="@string/lockscreen_pulse_settings"
+        android:defaultValue="false" />
+
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="ambient_pulse_enabled"
+        android:title="@string/ambient_pulse_settings"
+        android:defaultValue="false" />
+
+    <PreferenceCategory
         android:key="pulse_render_mode_category"
         android:title="@string/pulse_render_mode_title" >
 
-        <!- Fading bars ->
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        <!-- Fading bars -->
+        <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
             android:key="pulse_render_mode_fading_lines"
             android:title="@string/pulse_render_mode_solid_lines"
             aicpextras:thereCanBeOnlyOneGroupId="1"
@@ -33,8 +43,8 @@
             android:defaultValue="true"
             android:fragment="com.aicp.extras.fragments.PulseSettingsBars" />
 
-        <!- Fading blocks ->
-        <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+        <!-- Fading blocks -->
+        <com.aicp.extras.preference.SecureSettingMasterSwitchPreference
             android:key="pulse_render_mode_fading_blocks"
             android:title="@string/pulse_render_mode_fading_bars"
             aicpextras:thereCanBeOnlyOneGroupId="1"
@@ -42,7 +52,7 @@
             android:defaultValue="false"
             android:fragment="com.aicp.extras.fragments.PulseSettingsBlocks" />
 
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
             android:key="pulse_smoothing_enabled"
             android:title="@string/smoothing_enabled_title"
             android:summary="@string/smoothing_enabled_summary"
@@ -54,20 +64,20 @@
         android:key="pulse_color_category"
         android:title="@string/pulse_color" >
 
-        <com.aicp.gear.preference.SystemSettingIntListPreference
+        <com.aicp.gear.preference.SecureSettingIntListPreference
             android:key="navbar_pulse_color_type"
             android:title="@string/pulse_color_mode"
             android:entries="@array/pulse_color_mode_entries"
             android:entryValues="@array/pulse_color_mode_values"
             android:defaultValue="0"/>
 
-        <com.aicp.gear.preference.SystemSettingColorPickerPreference
+        <com.aicp.gear.preference.SecureSettingColorPickerPreference
             android:key="navbar_pulse_color_user"
             android:title="@string/pulse_color_chooser"
             android:defaultValue="0xffffffff"
             android:dialogTitle="@string/pulse_color_chooser_title" />
 
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        <com.aicp.gear.preference.SecureSettingSeekBarPreference
             android:key="navbar_pulse_lavalamp_speed"
             android:title="@string/lavamp_speed_title"
             android:max="30000"
@@ -80,6 +90,6 @@
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
-        android:title="@string/pulse_help_policy_notice_summary" /> -->
+        android:title="@string/pulse_help_policy_notice_summary" />
 
 </PreferenceScreen>

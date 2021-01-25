@@ -238,6 +238,10 @@
     <string name="quick_settings_title">Quick settings</string>
     <string name="quick_settings_summary">Edit quick settings appearance</string>
 
+    <!-- Quick settings media player orientation -->
+    <string name="quick_settings_player_layout_title">Ignore layout change</string>
+    <string name="quick_settings_player_layout_summary">Use same player layout irrespective of orientation</string>
+
     <!-- Disable music track title in QS tile -->
     <string name="qs_music_tile_track_optional_title">Music tile track title</string>
     <string name="qs_music_tile_track_optional_summary">Show the music track title as the QS tile title</string>
@@ -294,6 +298,8 @@
     <string name="translucent_quick_settings">Enable transparency</string>
     <string name="translucent_quick_settings_summary">Blur background panel</string>
     <string name="translucent_quick_settings_percentage">Background transparency percentage</string>
+    <string name="qs_panel_opacity_category_title">Panel background</string>
+    <string name="opacity_quick_settings">Opacity</string>
 
     <!-- Tiles animation style -->
     <string name="qs_tiles">QS Tiles</string>
@@ -935,9 +941,11 @@
     <string name="fling_config_restore_error_toast">Error restoring Fling profile</string>
 
     <!-- Pulse navigation bar music visualizer -->
-    <string name="pulse_help_policy_notice_summary">Pulse does not work with some audio sources when listening on device speaker</string>
+    <string name="pulse_help_policy_notice_summary">Navigation bar pulse display.\nPulse does not work with some audio sources when listening on device speaker</string>
     <string name="pulse_settings">Pulse</string>
     <string name="pulse_settings_summary">Audio graphic equalizer. Click for options.</string>
+    <string name="lockscreen_pulse_settings">Show on lockscreen</string>
+    <string name="ambient_pulse_settings">Show on ambient display</string>
     <string name="show_pulse_title">Allow Pulse</string>
     <string name="show_pulse_summary">Audio graphic equalizer on the navigation bar</string>
     <string name="pulse_render_mode_title">Render</string>
@@ -1626,4 +1634,15 @@
     <!-- Notification headers -->
     <string name="notification_headers_title">Notification Headers</string>
     <string name="notification_headers_summary">Show headers in the notification shade</string>
+
+    <!-- Navbar styles -->
+    <string name="navbar_style_title">Navbar style</string>
+
+    <!-- StatusBar notification count -->
+    <string name="notif_count_title">Show notification count</string>
+    <string name="notif_count_summary">Enable to number of notifications on notification icons</string>
+
+    <!-- Lockscreen charge temperature unit -->
+    <string name="lockscreen_charge_temp_unit_title">Temperature unit</string>
+    <string name="lockscreen_charge_temp_unit_summary">Enable for Celcius, disable for Fahrenheit</string>
 </resources>
