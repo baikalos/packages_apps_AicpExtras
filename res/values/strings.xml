@@ -557,6 +557,7 @@
     <!-- System animations -->
     <string name="system_animations_title">Animations</string>
     <string name="system_animations_summary">System animations</string>
+    <string name="system_animations_duration_unit">millis</string>
     <string name="custom_bootanimation_title">Bootanimation</string>
     <string name="custom_bootanimation_summary">Select custom bootanimation. On every change, the current animation will be backed up to the AICP_backup folder in your internal storage. Old ones must be deleted manually if not needed.</string>
     <string name="bootanimation_preview">Bootanimation preview</string>
@@ -1056,6 +1057,7 @@
     <string name="activity_open_title">Activity open animation</string>
     <string name="activity_close_title">Activity close animation</string>
     <string name="task_open_title">Task open animation</string>
+    <string name="task_open_behind_title">Task open behind animation</string>
     <string name="task_close_title">Task close animation</string>
     <string name="task_move_to_front_title">Move to front animation</string>
     <string name="task_move_to_back_title">Move to back animation</string>
@@ -1321,8 +1323,21 @@
     <string name="media_scanner_on_boot_disabled">Do not scan media</string>
 
     <!-- Running Services Icon in QS Footer-->
-    <string name="qs_running_services_title">Running Services Icon</string>
-    <string name="qs_running_services_summary">Enable running services icon in the header</string>
+    <string name="qs_footer_running_services_title">Running Services Icon</string>
+    <string name="qs_footer_running_services_summary">Toggle on to show Running Services icon</string>
+
+    <!-- Settings Icon in QS Footer-->
+    <string name="qs_footer_settings_title">Settings Icon</string>
+    <string name="qs_footer_settings_summary">Toggle on to show Settings icon</string>
+
+    <!-- Edit Icon in QS Footer-->
+    <string name="qs_footer_edit_title">Edit Icon</string>
+    <string name="qs_footer_edit_summary">Toogle on to show Edit icon</string>
+
+    <!-- User Icon in QS Footer-->
+    <string name="qs_footer_show_user_title">MultiUser Icon</string>
+    <string name="qs_footer_show_user_summary">Toogle on to show MultiUser icon</string>
+
 
     <!-- Power menu and dialogs opacity -->
     <string name="power_menu_category">Power/reboot dialogs</string>
@@ -1645,4 +1660,22 @@
     <!-- Lockscreen charge temperature unit -->
     <string name="lockscreen_charge_temp_unit_title">Temperature unit</string>
     <string name="lockscreen_charge_temp_unit_summary">Enable for Celcius, disable for Fahrenheit</string>
+
+    <!-- Enable Signature spoofing -->
+    <string name="signature_spoofing_title">Spoof package signature</string>
+    <string name="signature_spoofing_summary">Enable to allow package signature spoofing</string>
+    <string name="signature_spoofing_footnote">Signature spoofing allows an app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Legitimate uses include an emulator pretending to be what it emulates. Grant this permission with caution only!</string>
+
+    <!-- Old Style Mobile -->
+    <string name="use_old_mobiletype_title">Use old mobile signal style</string>
+    <string name="use_old_mobiletype_summary">Enable to switch to oreo- or earlier mobile icon style with raised connection type indicator</string>
+
+    <!-- Lockscreen cover art filter -->
+     <string name="lockscreen_cover_filter_title">Lockscreen album art filter</string>
+     <string name="lockscreen_cover_filter_none">None</string>
+     <string name="lockscreen_cover_filter_grayscale">Grayscale</string>
+     <string name="lockscreen_cover_filter_tint">Accent tinted</string>
+     <string name="lockscreen_cover_filter_blur">Blur</string>
+     <string name="lockscreen_cover_filter_grayblur">Grayscale and blurred</string>
+     <string name="lockscreen_cover_filter_gradientblur">Gradient Blur</string>
 </resources>

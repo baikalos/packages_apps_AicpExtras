@@ -90,6 +90,15 @@
         android:summary="@string/smart_pixels_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SmartPixels" />
+
+    <com.aicp.gear.preference.SecureSettingSwitchPreference
+        android:key="allow_signature_fake"
+        android:title="@string/signature_spoofing_title"
+        android:summary="@string/signature_spoofing_summary"
+        android:defaultValue="false" />
+
+    <com.android.settingslib.widget.FooterPreference
+        android:title="@string/signature_spoofing_footnote" />
 <!--
     <PreferenceCategory
         android:key="system_ss_category"
@@ -106,46 +115,39 @@
     <PreferenceCategory
         android:title="@string/audio_panel_view">
 
-    <com.aicp.gear.preference.SecureSettingSwitchPreference
-        android:key="volume_panel_on_left"
-        android:title="@string/audio_panel_position_title"
-        android:summary="@string/audio_panel_position_summary"
-        android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
-<!--
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="audio_panel_view_media"
-        android:title="@string/audio_panel_view_media_title"
-        android:defaultValue="true"
-        android:enabled="false"/>
+        <com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="volume_panel_on_left"
+            android:title="@string/audio_panel_position_title"
+            android:summary="@string/audio_panel_position_summary"
+            android:defaultValue="@*android:bool/config_audioPanelOnLeftSide" />
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="audio_panel_view_ringer"
-        android:title="@string/audio_panel_view_ringer_title"
-        android:defaultValue="false"/>
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="audio_panel_view_ringer"
+            android:title="@string/audio_panel_view_ringer_title"
+            android:defaultValue="true" />
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="audio_panel_view_notification"
-        android:title="@string/audio_panel_view_notification_title"
-        android:defaultValue="false"/>
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="audio_panel_view_notification"
+            android:title="@string/audio_panel_view_notification_title"
+            android:defaultValue="false" />
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="audio_panel_view_alarm"
-        android:title="@string/audio_panel_view_alarm_title"
-        android:defaultValue="false"/>
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="audio_panel_view_alarm"
+            android:title="@string/audio_panel_view_alarm_title"
+            android:defaultValue="true" />
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="audio_panel_view_voice"
-        android:title="@string/audio_panel_view_voice_title"
-        android:defaultValue="false"/>
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="audio_panel_view_voice"
+            android:title="@string/audio_panel_view_voice_title"
+            android:defaultValue="false" />
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
-        android:key="audio_panel_view_bt_sco"
-        android:title="@string/audio_panel_view_bt_sco_title"
-	android:defaultValue="false"/>
--->
+        <com.aicp.gear.preference.SystemSettingSwitchPreference
+            android:key="audio_panel_view_bt_sco"
+            android:title="@string/audio_panel_view_bt_sco_title"
+            android:defaultValue="false" />
   </PreferenceCategory>
-<!--
-    <!- SELinux ->
+
+    <!-- SELinux -->
     <PreferenceCategory
         android:key="selinux"
         android:title="@string/selinux_category">
@@ -166,6 +168,6 @@
             android:summary="@string/selinux_persistence_summary"
             android:defaultValue="true" />
 
-    </PreferenceCategory> -->
+    </PreferenceCategory>
 
 </PreferenceScreen>
