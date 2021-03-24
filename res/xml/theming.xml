@@ -41,7 +41,7 @@
         android:key="theming_corner_radius"
         android:title="@string/theming_corners_title"
         aicpextras:overlayCategory="aicp.corner_radius"
-        aicpextras:overlayTarget="android" />
+        aicpextras:overlayTarget="android;com.android.systemui" />
 
     <com.aicp.gear.preference.OverlayPreference
         android:key="theming_qs_shape"
