@@ -1306,6 +1306,11 @@
     <string name="battery_light_medium_color">Medium battery</string>
     <string name="battery_light_full_color">Almost fully charged (90%)</string>
     <string name="battery_light_reallyfull_color">Full charged battery (%100)</string>
+    <string name="battery_light_blend_category">Blend colors</string>
+    <string name="battery_light_blend_title">Enable color blend</string>
+    <string name="battery_light_blend_summary">Gradually change colors between full and empty</string>
+    <string name="battery_light_blend_colors_title">Color selection</string>
+    <string name="battery_light_blend_colors_summary">Color range used when blending colors</string>
 
     <!-- App Ops-->
     <string name="app_ops_settings_summary">Control apps permissions</string>
@@ -1596,8 +1601,8 @@
     <string name="ringtone_focus_mode_stock">Both speaker and headset</string>
 
     <!-- OOS clear all button -->
-    <string name="enable_clear_all_button">Replace clear all text with nice button</string>
-    <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
+    <string name="enable_clear_all_button">Clear-All button</string>
+    <string name="enable_clear_all_button_summary">Enable to use a bottom-centered button instead of stock Clear All text</string>
 
     <!-- Long swipe gestures -->
     <string name="navbar_gesture_tweaks_cat_title">Advanced gestures</string>
