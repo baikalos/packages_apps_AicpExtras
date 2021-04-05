@@ -20,7 +20,7 @@ package com.aicp.extras.fragments;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.SELinux;
+//import android.os.SELinux;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreference;
@@ -42,10 +42,10 @@ public class SystemBehaviour extends BaseSettingsFragment
     private static final String KEY_AUDIO_PANEL_POSITION = "volume_panel_on_left";
     private static final String KEY_BARS = "bars_settings";
 */
-    private static final String SELINUX_CATEGORY = "selinux";
+    //private static final String SELINUX_CATEGORY = "selinux";
 
-    private SwitchPreference mSelinuxMode;
-    private SwitchPreference mSelinuxPersistence;
+    //private SwitchPreference mSelinuxMode;
+    //private SwitchPreference mSelinuxPersistence;
 
     @Override
     protected int getPreferenceResource() {
@@ -57,7 +57,7 @@ public class SystemBehaviour extends BaseSettingsFragment
         super.onCreate(savedInstanceState);
 
         // SELinux
-        Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
+        /*Preference selinuxCategory = findPreference(SELINUX_CATEGORY);
         mSelinuxMode = (SwitchPreference) findPreference(Constants.PREF_SELINUX_MODE);
         mSelinuxMode.setChecked(SELinux.isSELinuxEnforced());
         mSelinuxMode.setOnPreferenceChangeListener(this);
@@ -67,7 +67,7 @@ public class SystemBehaviour extends BaseSettingsFragment
         mSelinuxPersistence.setChecked(getContext()
                 .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE)
                 .contains(Constants.PREF_SELINUX_MODE));
-        Util.requireRoot(getActivity(), selinuxCategory);
+        Util.requireRoot(getActivity(), selinuxCategory);*/
 /*
         Util.requireConfig(getActivity(), findPreference(KEY_BARS),
                 com.android.internal.R.bool.config_haveHigherAspectRatioScreen, true, false);
@@ -79,7 +79,7 @@ public class SystemBehaviour extends BaseSettingsFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mSelinuxMode) {
+        /*if (preference == mSelinuxMode) {
             if ((Boolean) newValue) {
                 new SwitchSelinuxTask(getActivity()).execute(true);
                 setSelinuxEnabled(true, mSelinuxPersistence.isChecked());
@@ -91,10 +91,11 @@ public class SystemBehaviour extends BaseSettingsFragment
         } else if (preference == mSelinuxPersistence) {
             setSelinuxEnabled(mSelinuxMode.isChecked(), (Boolean) newValue);
             return true;
-        }
+        }*/
         return false;
     }
 
+/*
     private void setSelinuxEnabled(boolean status, boolean persistent) {
         SharedPreferences.Editor editor = getContext()
                 .getSharedPreferences("selinux_pref", Context.MODE_PRIVATE).edit();
@@ -132,5 +133,5 @@ public class SystemBehaviour extends BaseSettingsFragment
                 setSelinuxEnabled(SELinux.isSELinuxEnforced(), mSelinuxPersistence.isChecked());
             }
         }
-    }
+    } */
 }
