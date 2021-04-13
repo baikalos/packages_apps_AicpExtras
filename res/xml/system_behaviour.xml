@@ -55,15 +55,17 @@
         android:entries="@array/media_scanner_on_boot_entries"
         android:entryValues="@array/media_scanner_on_boot_values"
         android:defaultValue="0" />
+-->
 
-    <!- Suspend Actions ->
+    <!-- Suspend Actions -->
     <com.aicp.extras.preference.GlobalSettingMasterSwitchPreference
         android:key="start_screen_state_service"
         android:title="@string/screen_state_toggles_title"
+        android:summary="@string/screen_state_toggles_enable_summary"
         android:defaultValue="false"
         android:fragment="com.aicp.extras.fragments.SuspendActions" />
 
-
+<!--
     <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="edge_service_for_gestures"
         android:title="@string/edge_gesture_service_title"
@@ -78,11 +80,12 @@
 
 -->
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
-        android:defaultValue="false" />
+        android:defaultValue="false"
+        android:fragment="com.aicp.extras.fragments.SensorBlock"/>
 
     <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
         android:key="smart_pixels_enable"

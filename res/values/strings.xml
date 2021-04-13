@@ -64,6 +64,10 @@
     <string name="network_traffic_expanded_status_bar_summary">Show network activity in the status bar above quick settings</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold</string>
     <string name="network_traffic_autohide_threshold_kbs">kB/s</string>
+    <string name="network_traffic_indicator_mode_title">Traffic direction</string>
+    <string name="network_traffic_indicator_updown">Upload and download</string>
+    <string name="network_traffic_indicator_up">Upload only</string>
+    <string name="network_traffic_indicator_down">Download only</string>
 
     <!-- Battery bar -->
     <string name="battery_bar_title">Battery bar</string>
@@ -680,6 +684,7 @@
     <string name="yes">@android:string/yes</string>
     <string name="no">@android:string/no</string>
     <string name="reset">Reset</string>
+    <string name="disabled">Disabled</string>
     <string name="systemui_restart_title">SystemUI restart required</string>
     <string name="systemui_restart_message">For all changes to take effect, a SystemUI restart is required. Restart SystemUI now?</string>
     <string name="cannot_get_su">Action failed because of missing superuser access</string>
@@ -733,7 +738,7 @@
     <!-- OP like navigation gestures -->
     <string name="gesture_settings_title">Navigation Gestures</string>
     <string name="gesture_settings_info">Navigation bar must and will be automatically disabled!\n\nAvailable gestures:\n\nBack\n- Swipe up on left or right side\n\nHome\n- Swipe up center\n\nRecent apps\n- Swipe up center and hold\n\nLong press home\n- Short swipe up and hold in the center</string>
-    <string name="use_bottom_gesture_title">Navigation gestures</string>
+    <string name="use_bottom_gesture_title">Action gestures</string>
     <string name="use_bottom_gesture_summary">Use bottom swipe up gestures for navigation\nNavigation bar must be disabled!</string>
     <string name="gesture_swipe_length_title">Swipe trigger length</string>
     <string name="gesture_swipe_length_summary">Length of the swipe required to trigger gesture</string>
@@ -756,7 +761,8 @@
     <string name="navigation_bar_summary">Toggle to enable onscreen navigation bar</string>
     <string name="navigation_bar_layout_title">Layout</string>
     <string name="navigation_bar_layout_summary">Customize the layout of the navigation bar</string>
-    <string name="system_navigation_title">System navigation settings</string>
+    <string name="gesture_navigation_title">Gestural settings</string>
+    <string name="system_navigation_title">Navigation settings</string>
 
     <!-- Keys/Buttons -->
     <string name="hw_keys_swap_title">Swap hardware buttons</string>
@@ -1683,4 +1689,22 @@
      <string name="lockscreen_cover_filter_blur">Blur</string>
      <string name="lockscreen_cover_filter_grayblur">Grayscale and blurred</string>
      <string name="lockscreen_cover_filter_gradientblur">Gradient Blur</string>
+
+    <!-- AOD Schedule -->
+    <string name="always_on_display_schedule_title">Always on display schedule</string>
+    <string name="always_on_display_auto_mode_title">Activation</string>
+    <string name="always_on_display_schedule_sunset">Sunset</string>
+    <string name="always_on_display_schedule_sunrise">Sunrise</string>
+    <string name="always_on_display_schedule_twilight">Turns on from sunset to sunrise</string>
+    <string name="always_on_display_schedule_custom">Turns on based on a custom schedule</string>
+    <string name="always_on_display_start_time_title">AOD start time</string>
+    <string name="always_on_display_end_time_title">AOD end time</string>
+    <string name="always_on_display_schedule_mixed_sunset">Turns on between sunset and given time</string>
+    <string name="always_on_display_schedule_mixed_sunrise">Turns on between given time and sunrise</string>
+
+    <!-- Sensor block per-package -->
+    <string name="sensor_block_app_picker_title">Choose apps to block sensors for</string>
+    <string name="sensor_block_app_picker_summary">Block access to various sensors for selected apps.</string>
+    <string name="add_sensor_block_package_title">Add apps for Sensor block</string>
+    <string name="add_sensor_block_package_summary">Significant motion, accelerometer, linear acceleration sensors will be blocked for these apps</string>
 </resources>

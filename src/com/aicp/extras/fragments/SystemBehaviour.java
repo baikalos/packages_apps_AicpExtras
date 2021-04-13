@@ -74,7 +74,6 @@ public class SystemBehaviour extends BaseSettingsFragment
 */
         Util.requireConfig(getActivity(), findPreference(KEY_SMART_PIXELS),
                 com.android.internal.R.bool.config_enableSmartPixels, true, false);
-
     }
 
     @Override
