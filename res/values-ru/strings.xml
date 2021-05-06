@@ -814,7 +814,7 @@
     <string name="swap_navigation_keys_title">Поменять местами аппаратные кнопки</string>
     <string name="swap_navigation_keys_title_summary">Поменять местами кнопки «Недавние» и «Назад»</string>
     <string name="force_ambient_for_media_pref_title">Ambient Music Ticker</string>
-    <string name="force_ambient_for_media_pref_summary">Натройте отображение информации о текущем треке в режиме «Ambient Display»</string>
+    <string name="force_ambient_for_media_pref_summary">Настройте отображение информации о текущем треке в режиме «Ambient Display»</string>
     <string name="ambient_ticker_footer">Ambient Music Ticker отображает проигрываемый музыкальный трек на Ambient display.\n\nТакже срабатывает при выключенном Ambient display во время запуска нового трека, показывая пустой Ambient display с информацией о треке в центре экрана.\n\nВы также можете пропустить трек двойным нажатем на нём.\n\nЕсли у вас есть Pixel, включите функцию Now Playing и её нотификации в системных настройках звука. Ambient Music Ticker также будет работать с этой функцией.</string>
     <string name="force_ambient_for_media_title">Включить</string>
     <string name="screen_off_animation_title">Анимация выключения экрана</string>
